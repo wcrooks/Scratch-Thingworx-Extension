@@ -1,0 +1,15 @@
+{
+  "name": "extension-thingworx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "extension.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Andrew Sliwinski <andrewsliwinski@acm.org>",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "request": "2.81.0"
+  }
+}
