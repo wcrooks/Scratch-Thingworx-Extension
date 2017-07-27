@@ -17,13 +17,14 @@ app.use(function(req, res, next) {
 
 
 /*  
-	to send data to this server, needs to send to url localhost:8080/sendNum or <computer's ip>:8080/sendNum
-	data being sent also needs to have num property. ex: {num: "20"}
+    to send data to this server, needs to send to url localhost:8080/sendNum or <computer's ip>:8080/sendNum
+    data being sent also needs to have num property. ex: {num: "20"}
 */
 app.post("/sendNum", function(req, res){
+    res.send('200');
     var num = parseFloat(req.body.num);
     console.log(num);
-	/* put request to send to thingworx */
+    /* put request to send to thingworx */
     request({
         method: "PUT",
         url: "https://academic-ni.cloud.thingworx.com/Thingworx/Things/ScratchPad_wcrooks/Properties/*",
@@ -43,4 +44,4 @@ app.post("/sendNum", function(req, res){
     });
 
 });
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 8001);

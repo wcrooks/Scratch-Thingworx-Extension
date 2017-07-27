@@ -9,6 +9,9 @@ let storage = null;
  * @param  {string}   thing    Name of the "thing" in the ThingWorx API.
  * @param  {Function} callback
  */
+
+// change appkey, property name, and scratch pad
+
 function getProperty (thing, callback) {
     request({
         method: 'POST',

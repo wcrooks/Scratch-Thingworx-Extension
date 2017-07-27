@@ -20,13 +20,17 @@
 
     ext.sendData = function (val, callback) {
         $.ajax({
-            url: 'http://localhost:8080/sendNum',
+            url: 'http://localhost:8001/sendNum',
             type: 'POST',
             data: {num: val},
             dataType: 'json',
             success: function(result) {
                 window.console.log('Successful');
                 callback(result);
+            }
+            error: function (error) {
+                console.dir(error);
+                callback();
             }
         });
     };
