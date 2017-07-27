@@ -24,24 +24,24 @@ function getProperty (thing, callback) {
         // Validate response
         if (err) return callback(err);
         if (typeof body.properties === 'undefined') return callback('404');
-        if (typeof body.properties.RandomNumber === 'undefined') return callback('404');
-        if (typeof body.properties.RandomNumber.value === 'undefined') return callback('404');
+        if (typeof body.properties.RandomNumber2 === 'undefined') return callback('404');
+        if (typeof body.properties.RandomNumber2.value === 'undefined') return callback('404');
 
         // Return the value
-        return callback(null, body.properties.RandomNumber.value);
+        return callback(null, body.properties.RandomNumber2.value);
     });
 }
 
 setInterval(function () {
-    console.log(storage);
     getProperty('ScratchPad_wcrooks', function (err, body) {
         if (err) return;
         storage = body;
     });
+    console.log(storage);
 }, 1000);
 
 const server = http.createServer(function (req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.end(storage);
 });
-server.listen(8000);
+server.listen(8001);
