@@ -30,7 +30,7 @@ app.post("/sendNum", function(req, res){
         url: "https://academic-ni.cloud.thingworx.com/Thingworx/Things/ScratchPad_wcrooks/Properties/*",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "Basic d2Nyb29rczpjZWUwcHJlayE="
+            "appkey": "9f1feea6-0659-4062-bef9-977ff92a75d6"
         },
         json: {
             "RandomNumber3": num //change this to desired property, can also have multiple properties
