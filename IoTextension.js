@@ -27,7 +27,7 @@
             success: function(result) {
                 window.console.log('Successful');
                 callback(result);
-            }
+            },
             error: function (error) {
                 console.dir(error);
                 callback();
@@ -46,8 +46,8 @@
 
     var descriptor = {
         blocks: [
-            ['R', 'data in', 'getData'],
-            ['', 'data out %n', 'sendData', 0]
+            ['R', 'dataIn', 'getData'],
+            ['', 'dataOut %n', 'sendData', 0]
         ]
     };
 
